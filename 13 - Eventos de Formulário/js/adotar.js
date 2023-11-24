@@ -36,15 +36,18 @@ formulario.addEventListener("submit", (event) => {
   let renda = document.querySelector("input[name='renda']:checked");
   let residencia = document.querySelector("#residencia");
   let opcao = residencia.options[residencia.selectedIndex];
+  let intencao = document.querySelector("#intencao");
   console.log(renda);
 
-  if (validarCampos(nome, tel, email, renda, residencia, opcao)) {
+  if (validarCampos(nome, tel, email, renda, residencia, opcao,intencao)) {
     let adotante = {
       nome: nome.value,
       tel: telefone.value,
       email: email.value,
       renda: renda.value,
       residencia: opcao.value,
+      intencao: opcao.value,
+      idAnimal: "1"
     };
 
     console.log(adotante);
